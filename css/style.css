@@ -1,0 +1,738 @@
+/* style code applied for all website................. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* reset css.................................*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* change body font family.......................*/
+body{
+    font-family: "Poppins", sans-serif;
+}
+/* container style...................... */
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 5px 20px;
+}
+.section{
+    padding: 70px 0;
+    text-align: center;
+    height: 100vh;
+    transition: 1s;
+}
+/*  End style code applied for all website................. */
+/* start Header Style.................................*/
+.header{
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    overflow: auto;
+}
+.header .logo{
+    float: left;
+}
+.header .nav{
+    float: right;
+    list-style: none;
+    padding-top: 10px;
+}
+.header .logo img{
+    width: 70px;
+    height: 45px;
+    border-radius: 5px;
+}
+.header .nav li{
+    display: inline-block;
+}
+.header .nav li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #3a4cf6;
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+}
+.header .nav li a::after{
+    content: "";
+    width: 0;
+    height: 2.5px;
+    background-color: #3a4cf6;
+    display: block;
+    transition: .7s;
+}
+.header .nav li a.active::after{
+    width: 100%;
+}
+.header .nav li a:hover:after{
+    width: 100%;
+}
+/* End Header........................................... */
+/* start landing section style........................... */
+.landing{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/image.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.landing .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+.landing .landing-content{
+    /* padding: 100px 0; or */
+    position: absolute;
+    top: 50%;
+    transform: translate(0 , -50%);
+}
+.landing .landing-title{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 500;
+}
+.landing .landing-title span{
+    color: #3a4cf6;
+    font-size: 60px;
+    font-weight: 600;
+    display: block;
+    margin: 25px 0;
+}
+.landing .info{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+.landing .btn{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 15px 0;
+    width: 200px;
+    margin: 0 17px 35px 0;
+    border-radius: 10px;
+    border: none;
+    transition: .7s;
+}
+.landing .btn2{
+    background-color: #3a4cf6;
+}
+.landing .btn:hover{
+    opacity: .7;
+    transform: scale(1.1);
+}
+.landing .icons i{
+    color: #fff;
+    font-size: 25px;
+    padding-right: 28px;
+    transition: .8s;
+}
+.landing .icons a i:hover{
+    color: #3a4cf6;
+    font-size: 23px;
+}
+/* End landing section style............................. */
+/* Start about information section.......................... */
+.title{
+    color: #3a4cf6;
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.title::after{
+    content:"";
+    width: 100px;
+    height: 4px;
+    display: block;
+    background-color: #3a4cf6;
+    position: absolute;
+    left: 50%;
+    transform: translate( -50% , 0 );
+    margin-top: 10px;
+}
+.content{
+    padding-left: 0;
+    margin-top: 75px;
+    overflow: auto;
+    width: 100%;
+}
+.card{
+    float: left;
+    width: 30%;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 10px; 
+    padding: 20px 10px; 
+    position: relative; 
+}
+.card2{
+    margin: 0 5%;
+}
+.card-icon{
+    font-size: 50px;
+    font-weight: 800;
+    color: #3a4cf6;
+}
+.card-info{
+    margin-top: 20px;
+}
+.card-info h3{
+    color: #3a4cf6;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    transition: .7s;
+}
+.card-info p{
+    color: #888;
+    margin-bottom: 40px;
+    transition: .7s;
+}
+.card-info .more-details{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: blue;
+    transition: .7s;
+}
+.card::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #888;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    z-index: -1;
+    border-radius: 10px;
+}
+.card:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    visibility: visible;
+}
+.card:hover .card-info h3{
+    color: #250488;
+}
+.card:hover .card-info .more-details{
+    color: #2f1c6a;
+}
+.card-info .more-details:hover{
+    text-decoration: underline;
+}
+/* End about information section.......................... */
+/* start portfolio style ..................................*/
+#portfolio{
+    background-color: #000015;
+    height: 160vh;
+}
+#portfolio .content{
+    padding: 14px;
+}
+.portfolio-card{
+    width: 30%;
+    float: left;
+    height: 300px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 50px;
+    position: relative;
+    transition: 1s;
+}
+.portfolio-card img{
+    width: 80%;
+    height: 100%;
+}
+.hidden-layer{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #888;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(188, 188, 188, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+.portfolio-card:hover .hidden-layer{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+.hidden-layer .hidden-layer-content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate( 0, -50%);
+}
+.portfolio-card .hidden-layer span{
+    display: block;
+    color: #3a4cf6;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.portfolio-card .hidden-layer h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+.portfolio-card .hidden-layer .cat-icon a{
+    background-color: #3a4cf6;
+    display: inline-block;
+    color: purple;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    border-radius: 4px;
+    transition: .7s;
+}
+.portfolio-card .hidden-layer .cat-icon a:hover{
+    transform: scale(1.1);
+}
+.portfolio-card .hidden-layer .cat-icon i{
+    line-height: 55px;
+}
+/* End portfolio style ..................................*/
+/* start Service style section...............................*/
+#services{
+    height: 160vh;
+}
+#services .card{
+    margin-bottom: 50px;
+}
+/* End Service style section.................................*/
+/* Start price style section.................................*/
+#prices{
+    background-color: #000015;
+}
+#prices .content{
+    padding: 15px;
+}
+#prices .card{
+    background-color: #2036ff;
+    transition: .7s;
+}
+#prices .card:hover{
+    transform: scale(1.1);
+}
+#prices .card:hover::after{
+    display: none;
+}
+#prices .card:hover .price{
+    color: darkred;
+    transform: scale(1.1);
+}
+.price-card-title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+}
+.price{
+    width: 90px;
+    height: 90px;
+    border: 3px solid #dadce0;
+    border-radius: 50%;
+    margin: 15px auto;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2f1c6a;
+    transition: .7s;
+}
+#prices .card p span{
+    font-size: 30px;
+    font-weight: 900;
+}
+#prices .list{
+    list-style-type: none;
+    line-height: 27px;
+    color: #fff;
+    font-weight: bold;
+}
+.price-card-btn{
+    background-color: #ffe8ef;
+    color: darkred;
+    border: 2px solid #ffe8ef;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+/* End price style section.................................*/
+/* Start Team style section.................................*/
+#team .card:hover .team-icons{
+    opacity: .7;
+    visibility: visible;
+}
+#team .card::after{
+    display: none;
+}
+#team .card::before{
+    content: "";
+    width: 100%;
+    height: 0;
+    background-color: #888;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+}
+#team .card:hover::before{
+    height: 100%;
+    opacity: .4;
+    visibility: visible;
+}
+#team .card:hover .team-info .team-name{
+    color: #2f1c6a;
+}
+#team .card:hover .team-info .team-description{
+    color: darkred;
+}
+.team-img{
+    width: 90%;
+    height: 200px;
+    position: relative;
+    margin: auto;
+}
+.team-img img{
+    width: 100%;
+    height: 100%;
+}
+.team-icons{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+}
+.team-icons a{
+    display: block;
+    margin-left: auto;
+    width: 35px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #3a4cf6;
+    font-size: 20px;
+    transition: 0.7s;
+}
+.team-icons a:hover i{
+    transform: scale(1.1);
+    color: #2f1c6a;
+}
+.team-icons a i{
+    line-height: 40px;
+}
+.team-info .team-name{
+    text-transform: capitalize;
+    color: #3a4cf6;
+    margin: 12px 0;
+    transition: 0.7s;
+}
+.team-info .team-description{
+    text-transform: capitalize;
+    color: #000015;
+    transition: .7s;
+}
+/* End Team style section.................................*/
+/* Start statistics style section.................................*/
+#statistics{
+    background: url(../images/statistics.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    position: relative;
+}
+#statistics .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.statistics-card{
+    float: left;
+    width: 20%;
+    margin-left: 4%;
+    text-align: center;
+}
+.statistics-card i{
+    font-size: 40px;
+    color: #3a4cf6;
+}
+.statistics-info{
+    font-size: 30px;
+    color: #fff;
+    margin-top: 5px;
+}
+.statistics-info span{
+    display: block;
+    font-size: 20px;
+    margin-top: -10px;
+}
+/* End statistics style section...................................*/
+/* Start why choose us style section */
+.choose-info{
+    float: left;
+    width: 50%;
+}
+.choose-title{
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700px;
+    letter-spacing: 1px;
+    color: #3a4cf6;
+}
+.choose-title span{
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #3a4cf6;
+    margin: 5px 0 15px 0;
+}
+.choose-details{
+    text-align: left;
+    font-size: 17px;
+    font-weight: 500;
+}
+.choose-list{
+    list-style: none;
+    text-align: left;
+    margin: 10px;
+    font-size: 20px;
+    line-height: 40px;
+}
+.choose-list li i{
+    color: #2036ff;
+    margin-right: 5px;
+}
+.choose-img img{
+    width: 270px;
+}
+.dots{
+    list-style: none;
+}
+.dots ul li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #888;
+    margin-right: 10px;
+}
+.dots ul .active{
+    background-color: #3a4cf6;
+}
+.dots ul li:hover{
+    background-color: #3a4cf6;
+}
+.clear{
+    clear: both;
+}
+/* End why choose us style section............... */
+/* Start data style section........................*/
+#data{
+    background: url(../images/statistics.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    color: #fff;
+    position: relative;
+}
+#data .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+#data .container{
+    position: relative;
+}
+#data .content{
+    overflow: auto;
+}
+.data-card{
+    width: 40%;
+    margin: 0 5%;
+    float: left;
+}
+.data-img{
+    overflow: auto;
+}
+.data-img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+.data-img-info{
+    text-align: left;
+    text-transform: capitalize; 
+    padding: 10px;
+}
+.data-img-info span{
+    font-size: 17px;
+    color: #3a4cf6;
+    font-weight: 500;
+}
+.data-details{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+/* End data style section ...........................*/
+/* start recent news style section...................................*/
+#news{
+    height: 160vh;
+}
+.template{
+    background-color:#f0f0f0 ;
+    text-align: left;
+    width: 30%;
+    padding: 0 0 20px 20px;
+    float: left;
+    position: relative;
+}
+#news .template::after{
+    content: "";
+    width: 100%;
+    height: 0;
+    margin-left: -20px;
+    position: absolute;
+    top: 0;
+    background-color: #3a4cf6;
+    opacity: 0;
+    visibility: hidden;
+    transition: .7s;
+}
+#news .template:hover::after{
+    height: 100%;
+    opacity: .3;
+    visibility: visible;
+}
+.template .template-link:hover{
+    text-decoration: underline;
+    color: #2f1c6a;
+}
+.template2{
+    margin: 0 5%;
+}
+.template-img img{
+    width: 170px;
+    height: 200px;
+}
+.template-info .template-list{
+    list-style: none;
+}
+.template-info .template-list li{
+    display: inline-block;
+    font-size: 12px;
+    color: #000015;
+    margin-right: 7px;
+    text-transform: capitalize;
+    text-align: left;
+}
+.template-info .template-list li i{
+    color: #3a4cf6;
+    margin-right: 2px;
+}
+.template-info .template-title{
+    text-transform: capitalize;
+    color: #3a4cf6;
+    margin: 10px 0;
+}
+.template-info .template-par{
+    color: #2f1c6a;
+    margin-bottom: 10px;
+}
+.template-info .template-link{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+/* start recent news style section...................................*/
+/* start contact or footer style section.............................*/
+#contact{
+    background-color: #000015;
+    height: 50vh;
+    position: fixed;
+    bottom: 0;
+}
+#contact .footer-img{
+    width: 150px;
+    height: 80px;
+}
+#contact{
+    position: relative;
+}
+#contact .footer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+.footer-links a{
+    color: #3a4cf6;
+    font-size: 30px;
+    display: inline-block;
+    margin: 10px 0 10px 20px;
+}
+.footer-links a i{
+    transition: .7s;
+}
+.footer-links a:hover i{
+    transform: scale(1.2);
+}
+.footer p{
+    color: #ffe8ef;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+/* End contact or footer style section................................... */
+
