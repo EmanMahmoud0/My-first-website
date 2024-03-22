@@ -29,10 +29,10 @@ body{
 .header{
     background-color: #f0f0f0;
     width: 100%;
+    height: 9vh;
     position: fixed;
     top: 0;
     z-index: 999;
-    overflow: auto;
 }
 .header .logo{
     float: left;
@@ -40,7 +40,7 @@ body{
 .header .nav{
     float: right;
     list-style: none;
-    padding-top: 10px;
+    padding-top: 9px;
 }
 .header .logo img{
     width: 70px;
@@ -72,6 +72,30 @@ body{
 }
 .header .nav li a:hover:after{
     width: 100%;
+}
+.clear{
+    clear: both;
+}
+.blog{
+    position: relative;
+}
+.blog-post{
+    list-style: none;
+    background-color: #3a4cf6;
+    width: 125px;
+    position: absolute;
+    left: 79%;
+    padding: 13px 10px;
+    margin-top: 11px;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .7s;
+}
+.nav li .blog:hover + .blog-post{
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
 }
 /* End Header........................................... */
 /* start landing section style........................... */
